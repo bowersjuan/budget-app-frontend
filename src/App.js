@@ -10,9 +10,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="*" element={<div>Page not found</div>} />
         </Routes>
       </Router>
-      <h1>Pursuit App Template</h1>
     </div>
   );
 }
