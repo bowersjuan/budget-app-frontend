@@ -16,7 +16,7 @@ export default function BudgetNav() {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/transactions">Transactions</Nav.Link>
-            <Nav.Link href="#link">New Transaction</Nav.Link>
+            <Nav.Link href="/transactions/new">New Transaction</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
