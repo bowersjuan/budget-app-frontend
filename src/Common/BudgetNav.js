@@ -2,10 +2,11 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import logo from "../budget-buddy-logo.png";
+import "./BudgetNav.css";
 
 export default function BudgetNav() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar className="Navbar" bg="light" expand="lg">
       <Container>
         <Navbar.Brand href="">
           <img width="50em" src={logo} alt="logo" />
