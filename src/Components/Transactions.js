@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import Transaction from "./Transaction";
+import "./Transactions.css";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -17,7 +18,7 @@ export default function Transactions() {
 
   return (
     <div className="Transactions">
-      <h3>Bank Account Total: #</h3>
+      <h4>Bank Account Total: #</h4>
       <table>
         <thead>
           <tr>

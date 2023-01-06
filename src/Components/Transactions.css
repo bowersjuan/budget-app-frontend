@@ -1,0 +1,9 @@
+.Transactions {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+th {
+    border: 1px solid black !important;
+}
