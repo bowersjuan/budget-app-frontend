@@ -7,7 +7,9 @@ export default function BudgetNav() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="/">Budget Buddy</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <h1>Budget Buddy</h1>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
