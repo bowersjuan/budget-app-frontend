@@ -36,12 +36,13 @@ export default function TransactionNewForm() {
     <form onSubmit={handleSubmit}>
       <h4>New Transaction Form</h4>
       <div className="inputs-container">
-        <label htmlFor="itemName">Item Name: </label>
+        <label htmlFor="itemName">Item: </label>
         <input
           id="itemName"
           type="text"
           onChange={handleTextChange}
           value={transaction.itemName}
+          placeholder="Name..."
           required
         />
         <label htmlFor="amount">Amount: </label>
@@ -66,6 +67,7 @@ export default function TransactionNewForm() {
           type="text"
           onChange={handleTextChange}
           value={transaction.from}
+          placeholder="Source..."
           required
         />
         <label htmlFor="category">Category: </label>
@@ -74,6 +76,7 @@ export default function TransactionNewForm() {
           type="text"
           onChange={handleTextChange}
           value={transaction.category}
+          placeholder="Type..."
           required
         />
       </div>
