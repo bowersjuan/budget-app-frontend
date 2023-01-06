@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 import Transaction from "./Transaction";
 
 const transactionsData = [
   {
+    id: uuidv4(),
     itemName: "monthly tips",
     amount: 1000,
     date: "1/1/23",
@@ -10,6 +12,7 @@ const transactionsData = [
     category: "income",
   },
   {
+    id: uuidv4(),
     itemName: "food",
     amount: -200,
     date: "1/8/23",
@@ -38,7 +41,9 @@ export default function Transactions() {
         </thead>
         <tbody>
           {transactions?.map((transaction) => {
-            return <Transaction transaction={transaction} />;
+            return (
+              <Transaction key={transaction.id} transaction={transaction} />
+            );
           })}
         </tbody>
       </table>
