@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import Transaction from "./Transaction";
 import "./Transactions.css";
@@ -40,7 +39,9 @@ export default function Transactions() {
         </thead>
         <tbody>
           {transactions?.map((transaction) => {
-            return <Transaction key={uuidv4()} transaction={transaction} />;
+            return (
+              <Transaction key={transaction.id} transaction={transaction} />
+            );
           })}
         </tbody>
       </table>

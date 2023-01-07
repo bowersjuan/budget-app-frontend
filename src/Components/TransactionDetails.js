@@ -16,7 +16,7 @@ export default function TransactionDetails() {
       .get(`${API}/transactions/${id}`)
       .then((response) => setTransaction(response.data))
       .catch((err) => console.error(err));
-  }, [transaction, id]);
+  }, [id]);
 
   return (
     <div className="transaction-details">
