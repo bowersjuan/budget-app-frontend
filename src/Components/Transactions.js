@@ -39,7 +39,8 @@ export default function Transactions() {
   return (
     <div className="Transactions">
       <h4 style={{ backgroundColor: accountTotalAlert(accountTotal) }}>
-        Bank Account Total: ${accountTotal}
+        Bank Account Total: {accountTotal < 0 ? "-" : ""}$
+        {accountTotal < 0 ? accountTotal * -1 : accountTotal}
       </h4>
       <table>
         <thead>
