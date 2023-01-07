@@ -2,8 +2,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
-import logo from "../budget-buddy-logo.png";
-import logo2 from "../budget-buddy-logo-2.png";
+import logo from "../assets/budget-buddy-logo.png";
+import logo2 from "../assets/budget-buddy-logo-2.png";
 import "./BudgetNav.css";
 
 export default function BudgetNav() {
