@@ -29,14 +29,20 @@ export default function TransactionDetails() {
         style={{
           backgroundColor: transactionColorPicker(transaction?.amount),
         }}>
-        <p className="small-text">date: {transaction?.date}</p>
+        <p className="white-bkgrd" style={{ borderBottom: "5px solid black" }}>
+          Date
+        </p>
+        <p>{transaction?.date}</p>
       </section>
       <section className="empty"></section>
       <section
         style={{
           backgroundColor: transactionColorPicker(transaction?.amount),
         }}>
-        <p className="small-text">name: {transaction?.itemName}</p>
+        <p className="white-bkgrd" style={{ borderBottom: "5px solid black" }}>
+          Name
+        </p>
+        <p>{transaction?.itemName}</p>
       </section>
       <section
         style={{
@@ -50,7 +56,7 @@ export default function TransactionDetails() {
               src={transaction.amount > 0 ? mario : bowser}
               alt={transaction.amount > 0 ? "mario" : "bowser"}
             />
-            <p>{transaction.amount}</p>
+            <p style={{ fontSize: "medium" }}>{transaction.amount}</p>
           </>
         ) : (
           ""
@@ -60,14 +66,20 @@ export default function TransactionDetails() {
         style={{
           backgroundColor: transactionColorPicker(transaction?.amount),
         }}>
-        <p className="small-text">category: {transaction?.category}</p>
+        <p className="white-bkgrd" style={{ borderBottom: "5px solid black" }}>
+          Category
+        </p>
+        <p>{transaction?.category}</p>
       </section>
       <section className="empty"></section>
       <section
         style={{
           backgroundColor: transactionColorPicker(transaction?.amount),
         }}>
-        <p className="small-text">from: {transaction?.from}</p>
+        <p className="white-bkgrd" style={{ borderBottom: "5px solid black" }}>
+          From
+        </p>
+        <p>{transaction?.from}</p>
       </section>
       <section className="empty"></section>
     </div>
