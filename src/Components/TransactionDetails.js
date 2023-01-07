@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import mario from "../mario.png";
-import bowser from "../bowser.png";
+import EditButton from "./EditButton";
+import mario from "../assets/mario.png";
+import bowser from "../assets/bowser.png";
 import "./TransactionDetails.css";
 
 const API = process.env.REACT_APP_API_URL;
@@ -71,7 +72,7 @@ export default function TransactionDetails() {
         </p>
         <p>{transaction?.category}</p>
       </section>
-      <section className="empty"></section>
+      <EditButton />
       <section
         style={{
           backgroundColor: transactionColorPicker(transaction?.amount),

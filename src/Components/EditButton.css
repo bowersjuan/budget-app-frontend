@@ -1,0 +1,9 @@
+.edit-container {
+    background-image: url("../assets/mario-q-block.png");
+    border: 5px solid white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-small;
+}
