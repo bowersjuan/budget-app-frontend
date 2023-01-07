@@ -27,7 +27,7 @@ export default function TransactionNewForm() {
     e.preventDefault();
 
     axios
-      .post(`${API}/transactions`, transaction)
+      .post(`${API}/transactions/new`, transaction)
       .then(() => navigate("/transactions"))
       .catch((err) => console.error(err));
   };
