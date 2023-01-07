@@ -9,3 +9,7 @@
 th {
     border: 5px solid black !important;
 }
+
+.Transactions h4 {
+    padding: 10px;
+}

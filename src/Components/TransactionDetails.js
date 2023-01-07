@@ -11,6 +11,10 @@ export default function TransactionDetails() {
   const [transaction, setTransaction] = useState();
   const { id } = useParams();
 
+  function transactionColorPicker(amount = 0) {
+    return amount > 0 ? "lime" : amount < 0 ? "red" : "white";
+  }
+
   useEffect(() => {
     axios
       .get(`${API}/transactions/${id}`)
@@ -21,14 +25,23 @@ export default function TransactionDetails() {
   return (
     <div className="transaction-details">
       <section className="empty"></section>
-      <section>
+      <section
+        style={{
+          backgroundColor: transactionColorPicker(transaction?.amount),
+        }}>
         <p className="small-text">date: {transaction?.date}</p>
       </section>
       <section className="empty"></section>
-      <section>
+      <section
+        style={{
+          backgroundColor: transactionColorPicker(transaction?.amount),
+        }}>
         <p className="small-text">name: {transaction?.itemName}</p>
       </section>
-      <section>
+      <section
+        style={{
+          backgroundColor: transactionColorPicker(transaction?.amount),
+        }}>
         {transaction ? (
           <>
             <img
@@ -43,11 +56,17 @@ export default function TransactionDetails() {
           ""
         )}
       </section>
-      <section>
+      <section
+        style={{
+          backgroundColor: transactionColorPicker(transaction?.amount),
+        }}>
         <p className="small-text">category: {transaction?.category}</p>
       </section>
       <section className="empty"></section>
-      <section>
+      <section
+        style={{
+          backgroundColor: transactionColorPicker(transaction?.amount),
+        }}>
         <p className="small-text">from: {transaction?.from}</p>
       </section>
       <section className="empty"></section>

@@ -16,6 +16,16 @@ export default function Transactions() {
     setAccountTotal(total);
   }
 
+  function accountTotalAlert(balance) {
+    let bkgrndColor = "white";
+    if (balance >= 1000) {
+      bkgrndColor = "lime";
+    } else if (balance < 0) {
+      bkgrndColor = "red";
+    }
+    return bkgrndColor;
+  }
+
   useEffect(() => {
     axios
       .get(`${API}/transactions`)
@@ -28,7 +38,9 @@ export default function Transactions() {
 
   return (
     <div className="Transactions">
-      <h4>Bank Account Total: ${accountTotal}</h4>
+      <h4 style={{ backgroundColor: accountTotalAlert(accountTotal) }}>
+        Bank Account Total: ${accountTotal}
+      </h4>
       <table>
         <thead>
           <tr>
