@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
 import "./TransactionNewForm.css";
 
 const API = process.env.REACT_APP_API_URL;
 
 export default function TransactionNewForm() {
   const [transaction, setTransaction] = useState({
+    id: uuidv4(),
     itemName: "",
     amount: 0,
     date: "",
@@ -30,6 +32,15 @@ export default function TransactionNewForm() {
       .post(`${API}/transactions/new`, transaction)
       .then(() => navigate("/transactions"))
       .catch((err) => console.error(err));
+
+    setTransaction({
+      id: "",
+      itemName: "",
+      amount: 0,
+      date: "",
+      from: "",
+      category: "",
+    });
   };
 
   return (
