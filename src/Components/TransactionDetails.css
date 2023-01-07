@@ -1,0 +1,25 @@
+.transaction-details {
+    width: 360px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+section {
+    border: 5px solid black;
+    background-color: lime;
+
+    width: 100px;
+    height: 100px;
+}
+
+.empty {
+    background-color: white;
+    border: none;
+}
+
+.small-text {
+    font-size: x-small;
+}
