@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import EditButton from "./EditButton";
+import DeleteButton from "./DeleteButton";
 import mario from "../assets/mario.png";
 import bowser from "../assets/bowser.png";
 import "./TransactionDetails.css";
@@ -82,7 +83,7 @@ export default function TransactionDetails() {
         </p>
         <p>{transaction?.from}</p>
       </section>
-      <section className="empty"></section>
+      <DeleteButton id={id} />
     </div>
   );
 }

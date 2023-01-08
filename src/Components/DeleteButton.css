@@ -1,0 +1,9 @@
+.delete-container {
+    background-image: url("../assets/underworld-block.png");
+    border: 5px solid white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-small;
+}
