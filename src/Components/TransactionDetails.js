@@ -72,7 +72,7 @@ export default function TransactionDetails() {
         </p>
         <p>{transaction?.category}</p>
       </section>
-      <EditButton />
+      <EditButton id={id} />
       <section
         style={{
           backgroundColor: transactionColorPicker(transaction?.amount),
