@@ -1,0 +1,13 @@
+.inputs-container {
+    width: 500px;
+    margin: auto;
+    margin-top: 30px;
+
+    display: grid;
+    grid-template-columns: 160px 300px;
+    text-align: right;
+}
+
+input {
+    text-align: center;
+}

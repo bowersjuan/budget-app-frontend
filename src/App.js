@@ -4,6 +4,7 @@ import Home from "./Pages/Home";
 import Index from "./Pages/Index";
 import New from "./Pages/New";
 import Show from "./Pages/Show";
+import Edit from "./Pages/Edit";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/transactions" element={<Index />} />
           <Route path="/transactions/new" element={<New />} />
           <Route path="/transactions/:id" element={<Show />} />
+          <Route path="/transactions/:id/edit" element={<Edit />} />
           <Route path="*" element={<div>Page not found</div>} />
         </Routes>
       </Router>
