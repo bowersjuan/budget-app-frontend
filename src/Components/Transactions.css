@@ -6,10 +6,15 @@
     flex-direction: column;
 }
 
-th {
-    border: 5px solid black !important;
+thead th {
+    border: 5px solid black;
+    font-size: small;
 }
 
 .Transactions h4 {
     padding: 10px;
+}
+
+th {
+    padding: 5px;
 }

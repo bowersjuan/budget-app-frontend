@@ -1,3 +1,13 @@
-th {
+.transaction-row th {
     font-size: x-small;
+    border: 5px solid black;
 }
+
+.transaction-row button {
+    margin-left: 5px;
+}
+
+.xxsmall-text {
+    font-size: xx-small;
+}
+
