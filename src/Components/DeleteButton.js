@@ -8,7 +8,6 @@ export default function DeleteButton({ id }) {
   const navigate = useNavigate();
 
   function handleClick(id) {
-    console.log(id);
     axios
       .delete(`${API}/transactions/${id}`)
       .then(() => navigate("/transactions"))
