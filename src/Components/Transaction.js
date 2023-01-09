@@ -8,6 +8,14 @@ export default function Transaction({ transaction }) {
   const navigate = useNavigate();
   const { id, amount, itemName, date } = transaction;
 
+  function formatDate(date) {
+    let dateObj = new Date(date + "T00:00");
+    const dateArray = dateObj.toDateString().split(" ");
+    return `${dateArray[1]} ${dateArray[2]}, ${dateArray[3]}`;
+  }
+
+  formatDate(date);
+
   function handleClick(id) {
     axios
       .delete(`${API}/transactions/${id}`)
@@ -17,7 +25,7 @@ export default function Transaction({ transaction }) {
 
   return (
     <tr className="transaction-row">
-      <th>{date}</th>
+      <th>{formatDate(date)}</th>
       <th>
         <Link to={`/transactions/${id}`} style={{ textDecorationLine: "none" }}>
           {itemName}
