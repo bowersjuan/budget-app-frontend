@@ -16,7 +16,7 @@ export default function Home() {
           width="432"
           height="200"
           frameBorder="0"
-          class="giphy-embed"
+          className="giphy-embed"
           allowFullScreen></iframe>
       </div>
     </div>
