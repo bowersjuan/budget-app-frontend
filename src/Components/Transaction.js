@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import { formatDate } from "../helpers/dateFormatters";
 import axios from "axios";
 import "./Transaction.css";
 
@@ -7,14 +8,6 @@ const API = process.env.REACT_APP_API_URL;
 export default function Transaction({ transaction }) {
   const navigate = useNavigate();
   const { id, amount, itemName, date } = transaction;
-
-  function formatDate(date) {
-    let dateObj = new Date(date + "T00:00");
-    const dateArray = dateObj.toDateString().split(" ");
-    return `${dateArray[1]} ${dateArray[2]}, ${dateArray[3]}`;
-  }
-
-  formatDate(date);
 
   function handleClick(id) {
     axios

@@ -5,6 +5,7 @@ import EditButton from "./EditButton";
 import DeleteButton from "./DeleteButton";
 import mario from "../assets/mario.png";
 import bowser from "../assets/bowser.png";
+import { formatDate } from "../helpers/dateFormatters";
 import "./TransactionDetails.css";
 
 const API = process.env.REACT_APP_API_URL;
@@ -34,7 +35,7 @@ export default function TransactionDetails() {
         <p className="white-bkgrd" style={{ borderBottom: "5px solid black" }}>
           Date
         </p>
-        <p>{transaction?.date}</p>
+        {transaction ? <p>{formatDate(transaction.date)}</p> : null}
       </section>
       <section className="empty"></section>
       <section
