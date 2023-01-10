@@ -29,6 +29,7 @@ export default function TransactionDetails() {
     <div className="transaction-details">
       <section className="empty"></section>
       <section
+        className="data-section"
         style={{
           backgroundColor: transactionColorPicker(transaction?.amount),
         }}>
@@ -39,6 +40,7 @@ export default function TransactionDetails() {
       </section>
       <section className="empty"></section>
       <section
+        className="data-section"
         style={{
           backgroundColor: transactionColorPicker(transaction?.amount),
         }}>
@@ -48,6 +50,7 @@ export default function TransactionDetails() {
         <p>{transaction?.itemName}</p>
       </section>
       <section
+        className="data-section"
         style={{
           backgroundColor: transactionColorPicker(transaction?.amount),
         }}>
@@ -66,6 +69,7 @@ export default function TransactionDetails() {
         )}
       </section>
       <section
+        className="data-section"
         style={{
           backgroundColor: transactionColorPicker(transaction?.amount),
         }}>
@@ -76,6 +80,7 @@ export default function TransactionDetails() {
       </section>
       <EditButton id={id} />
       <section
+        className="data-section"
         style={{
           backgroundColor: transactionColorPicker(transaction?.amount),
         }}>
