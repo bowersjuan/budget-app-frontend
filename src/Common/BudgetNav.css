@@ -27,3 +27,7 @@ img {
 iframe:hover {
     box-shadow: 50px 50px 0px 10px lime;
 }
+
+#amount {
+    padding: 2px;
+}

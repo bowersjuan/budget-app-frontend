@@ -44,7 +44,12 @@ export default function BudgetNav() {
         </Navbar.Collapse>
         <div className="amount-container">
           <p>Balance:</p>
-          <p id="amount">
+          <p
+            id="amount"
+            style={{
+              backgroundColor:
+                balance >= 1000 ? "lime" : balance < 0 ? "red" : "white",
+            }}>
             {balance < 0 ? "-" : ""}${balance < 0 ? balance * -1 : balance}
           </p>
         </div>
