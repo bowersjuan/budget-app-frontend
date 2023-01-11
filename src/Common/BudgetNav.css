@@ -10,3 +10,20 @@
     text-align: center;
     font-size: x-small;
 }
+
+img {
+    border-radius: 50px;
+}
+
+#dollar-sign-logo:hover {
+    border: 1px solid lime;
+    box-shadow: 10px 5px 0px 2px lime;
+}
+
+#toggle:hover {
+    box-shadow: 9px 9px 2px 2px lime;
+}
+
+iframe:hover {
+    box-shadow: 50px 50px 0px 10px lime;
+}
