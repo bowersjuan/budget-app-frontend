@@ -60,11 +60,7 @@ export default function TransactionDetails() {
         </p>
         <p>{transaction.itemName}</p>
       </section>
-      <section
-        className="data-section"
-        style={{
-          backgroundColor: transactionColorPicker(transaction.amount),
-        }}>
+      <section className="white-bkgrd">
         <>
           <img
             style={{ padding: "10px" }}

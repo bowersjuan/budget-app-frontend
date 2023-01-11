@@ -13,9 +13,7 @@ section {
 }
 
 .data-section {
-    border: 5px solid black;;
-   
-    box-shadow: 0px 0px 0px 10px rgb(105 145 245);
+    border: 5px solid black;
 }
 
 .empty {
