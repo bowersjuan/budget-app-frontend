@@ -23,7 +23,9 @@ export default function TransactionDetails() {
   useEffect(() => {
     axios
       .get(`${API}/transactions/${id}`)
-      .then((response) => setTransaction(response.data))
+      .then((response) => {
+        setTransaction(response.data);
+      })
       .catch((err) => console.error(err));
   }, [id]);
 
@@ -68,7 +70,12 @@ export default function TransactionDetails() {
             src={transaction.amount > 0 ? mario : bowser}
             alt={transaction.amount > 0 ? "mario" : "bowser"}
           />
-          <p style={{ fontSize: "medium" }}>{transaction.amount}</p>
+          <p style={{ fontSize: "medium" }}>
+            {transaction.amount < 0 ? "-" : ""}$
+            {transaction.amount < 0
+              ? transaction.amount * -1
+              : transaction.amount}
+          </p>
         </>
       </section>
       <section

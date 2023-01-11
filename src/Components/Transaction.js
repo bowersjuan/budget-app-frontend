@@ -24,7 +24,9 @@ export default function Transaction({ transaction }) {
           {itemName}
         </Link>
       </th>
-      <th style={{ backgroundColor: amount > 0 ? "lime" : "red" }}>{amount}</th>
+      <th style={{ backgroundColor: amount > 0 ? "lime" : "red" }}>
+        {amount < 0 ? "-" : ""}${amount < 0 ? amount * -1 : amount}
+      </th>
       <th style={{ border: "none" }}>
         <button
           className="xxsmall-text"
